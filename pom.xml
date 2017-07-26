@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>gw.bif.tagger</groupId>
-	<artifactId>bacnet</artifactId>
+	<artifactId>tagger-svc-bacnet</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
