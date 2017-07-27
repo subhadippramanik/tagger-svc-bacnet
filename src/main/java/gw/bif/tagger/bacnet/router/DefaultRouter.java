@@ -4,11 +4,9 @@ import java.util.Map;
 
 import org.apache.camel.ProducerTemplate;
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.model.language.SimpleExpression;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
+
 public class DefaultRouter extends RouteBuilder {
 	
 	@Autowired
