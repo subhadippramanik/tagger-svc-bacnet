@@ -9,25 +9,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import gw.bif.tagger.bacnet.enricher.BacnetTagEnricher;
-import gw.bif.tagger.bacnet.enricher.ModbusTagEnricher;
 
 @RestController
 public class TaggerBacnetController {
 	
 	@Autowired
-	BacnetTagEnricher bacnetTagEnricher;
-	
-	@Autowired
-	ModbusTagEnricher modbusTagEnricher;
+	BacnetTagEnricher bacnetTagEnricher;	
 	
 	@RequestMapping(value = "/bacnet", method = RequestMethod.POST)
 	public Map<String, String> bacnet(@RequestBody Map<String, String> message) {		
 		return bacnetTagEnricher.enrich(message);
-	}
-	
-	@RequestMapping(value = "/modbus", method = RequestMethod.POST)
-	public Map<String, String> modbus(@RequestBody Map<String, String> message) {		
-		return modbusTagEnricher.enrich(message);
 	}
 	
 }

@@ -19,8 +19,7 @@ public class DefaultRouter extends RouteBuilder {
 	@Override
 	public void configure() throws Exception {
 		from("direct:in")//
-		.log("${body}")//
-		//.transform(new SimpleExpression("Hello"))//
+		.log("${body}")//		
 		.process((exchange) -> {
 			Map<String, String> body = exchange.getIn().getBody(Map.class);
 			exchange.getOut().setBody(body + 
